@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Lead Scanner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        
+        .feature-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #cbd5e1;
+            padding: 0.4rem 1rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        .tag span {
+            color: #60a5fa;
+            margin-right: 0.3rem;
+        }
+        
+        .chat-wrapper {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4),
+                        0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-wrapper:hover {
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5),
+                        0 0 0 1px rgba(96, 165, 250, 0.2) inset,
+                        0 0 30px rgba(96, 165, 250, 0.05);
+        }
+        
+        .iframe-container {
+            width: 100%;
+            height: 700px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: transparent;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #475569;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+        
+        .pulse-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #34d399;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .header p {
+                font-size: 1rem;
+            }
+            
+            .iframe-container {
+                height: 80vh;
+            }
+            
+            body {
+                padding: 1rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Property Lead Scanner</h1>
+            <p><span class="pulse-dot"></span>AI-powered motivated seller detection</p>
+        </div>
+        
+        <div class="feature-tags">
+            <div class="tag"><span>🔍</span> Long-term holders</div>
+            <div class="tag"><span>🏠</span> Vacant properties</div>
+            <div class="tag"><span>📉</span> Distressed sales</div>
+            <div class="tag"><span>🧠</span> AI lead scoring</div>
+        </div>
+        
+        <div class="chat-wrapper">
+            <div class="iframe-container">
+                <iframe
+                    src="https://udify.app/chatbot/872SzNzayWaWdv1B"
+                    style="width: 100%; height: 100%; min-height: 700px"
+                    frameborder="0"
+                    allow="microphone">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Type "find likely sellers" or use filters to scan for motivated property leads
+        </div>
+    </div>
+</body>
+</html>
